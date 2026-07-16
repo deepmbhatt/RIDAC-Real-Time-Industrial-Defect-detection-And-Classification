@@ -1,0 +1,16 @@
+metric,absolute_change
+box_precision,0.019972164225187994
+box_recall,0.0
+box_map50,0.0
+box_map50_95,0.0015198319886607914
+mask_precision,0.019972164225187994
+mask_recall,0.0
+mask_map50,0.0
+mask_map50_95,-0.0006402610039398793
+pixel_iou_micro,-2.549653237426952e-06
+pixel_dice_micro,-1.299592486514456e-06
+pixel_precision_micro,-0.0025522880099864143
+pixel_recall_micro,0.0025654077347735393
+pixel_iou_macro,0.0001525367333995442
+pixel_dice_macro,8.335719452701174e-05
+boundary_f1_macro,8.406024003460022e-05

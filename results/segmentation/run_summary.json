@@ -1,0 +1,11 @@
+{
+  "teacher": "/home/student/Deep-Mtech/deep_trial/Red-Light-Violation-Detection/runs/segment/train-7/weights/best.pt",
+  "trained_model": "/home/student/Deep-Mtech/misc/ridac/pseudo_label_segmentation_retraining/runs/pseudo_finetune/weights/best.pt",
+  "pseudo_confidence": 0.9,
+  "ground_truth_train_images": 1058,
+  "pseudo_train_images": 10182,
+  "pseudo_masks": 29849,
+  "validation_images": 98,
+  "test_images": 50,
+  "seed": 42
+}

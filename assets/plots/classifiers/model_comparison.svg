@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#ffffff"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">RIDAC Classifier Comparison</text>
+  <text x="600" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#64748b">Held-out test set: 6,815 segmented object crops</text>
+  <line x1="110" y1="500" x2="1140" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="110" y1="120" x2="110" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#475569">
+    <text x="92" y="505" text-anchor="end">0.900</text>
+    <text x="92" y="410" text-anchor="end">0.925</text>
+    <text x="92" y="315" text-anchor="end">0.950</text>
+    <text x="92" y="220" text-anchor="end">0.975</text>
+    <text x="92" y="125" text-anchor="end">1.000</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="110" y1="405" x2="1140" y2="405"/>
+    <line x1="110" y1="310" x2="1140" y2="310"/>
+    <line x1="110" y1="215" x2="1140" y2="215"/>
+    <line x1="110" y1="120" x2="1140" y2="120"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="185" y="143.4" width="85" height="356.6" rx="6" fill="#94a3b8"/>
+    <rect x="280" y="460.3" width="85" height="39.7" rx="6" fill="#cbd5e1"/>
+    <rect x="375" y="157.2" width="85" height="342.8" rx="6" fill="#64748b"/>
+    <text x="227" y="132" text-anchor="middle" font-size="13" fill="#334155">99.384%</text>
+    <text x="322" y="449" text-anchor="middle" font-size="13" fill="#334155">91.026%</text>
+    <text x="417" y="146" text-anchor="middle" font-size="13" fill="#334155">99.833%</text>
+    <text x="322" y="535" text-anchor="middle" font-size="17" font-weight="700" fill="#334155">ResNet18</text>
+
+    <rect x="510" y="121.2" width="85" height="378.8" rx="6" fill="#16a34a"/>
+    <rect x="605" y="430.3" width="85" height="69.7" rx="6" fill="#86efac"/>
+    <rect x="700" y="124.6" width="85" height="375.4" rx="6" fill="#15803d"/>
+    <text x="552" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">99.442%</text>
+    <text x="647" y="419" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">91.845%</text>
+    <text x="742" y="113" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">99.878%</text>
+    <text x="647" y="535" text-anchor="middle" font-size="17" font-weight="700" fill="#166534">MobileNetV3</text>
+
+    <rect x="835" y="143.4" width="85" height="356.6" rx="6" fill="#60a5fa"/>
+    <rect x="930" y="461.5" width="85" height="38.5" rx="6" fill="#bfdbfe"/>
+    <rect x="1025" y="125.8" width="85" height="374.2" rx="6" fill="#2563eb"/>
+    <text x="877" y="132" text-anchor="middle" font-size="13" fill="#1e40af">99.384%</text>
+    <text x="972" y="450" text-anchor="middle" font-size="13" fill="#1e40af">90.987%</text>
+    <text x="1067" y="114" text-anchor="middle" font-size="13" fill="#1e40af">99.848%</text>
+    <text x="972" y="535" text-anchor="middle" font-size="17" font-weight="700" fill="#1e40af">EfficientNet-B0</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#334155">
+    <rect x="385" y="574" width="18" height="18" rx="3" fill="#94a3b8"/>
+    <text x="411" y="588">Accuracy</text>
+    <rect x="525" y="574" width="18" height="18" rx="3" fill="#cbd5e1"/>
+    <text x="551" y="588">F1 score</text>
+    <rect x="660" y="574" width="18" height="18" rx="3" fill="#64748b"/>
+    <text x="686" y="588">Specificity</text>
+  </g>
+</svg>

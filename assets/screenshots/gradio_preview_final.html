@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RIDAC Gradio Application</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#172033;font-family:Inter,Arial,sans-serif}
+    main{width:1440px;height:920px;margin:auto;padding:32px 44px}h1{font-size:32px;margin:0 0 8px}
+    .sub{color:#526079;font-size:17px;margin-bottom:26px}.grid{display:grid;grid-template-columns:360px 1fr;gap:22px}
+    .card{background:#fff;border:1px solid #d9e1ec;border-radius:12px;box-shadow:0 2px 8px #0f172a0d;padding:20px}
+    label{display:block;font-weight:700;font-size:14px;margin:0 0 8px}.upload{border:2px dashed #a8b4c5;border-radius:10px;padding:22px;text-align:center;color:#55637a;background:#fbfdff}
+    .file{margin-top:9px;font-size:13px;color:#334155}.control{margin-top:19px}input{width:100%;accent-color:#4f46e5}
+    .ends{display:flex;justify-content:space-between;color:#64748b;font-size:12px}select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;background:white}
+    button{width:100%;margin-top:22px;padding:13px;border:0;border-radius:9px;background:#4f46e5;color:white;font-weight:700;font-size:15px}
+    .note{color:#64748b;font-size:12px;margin-top:15px}.status{border-left:5px solid #4f46e5;padding-left:16px;margin-bottom:16px}
+    .status h3,.timing h3{margin:0 0 8px}.badge{display:inline-block;padding:4px 9px;border-radius:999px;background:#dcfce7;color:#166534;font-size:12px}
+    .image{height:430px;border-radius:9px;overflow:hidden;border:1px solid #d8e0ea;background:#111827;display:flex;align-items:center;justify-content:center}
+    .image img{width:100%;height:100%;object-fit:contain}.timing{margin-top:22px;border-left:5px solid #0891b2}
+    .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:14px}.metric{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:13px}
+    .metric strong{display:block;font-size:21px}.metric span{color:#64748b;font-size:12px}.table{margin-top:22px}
+    table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;background:#f1f5f9;color:#475569;padding:10px 8px;border-bottom:1px solid #cbd5e1}
+    td{text-align:center;color:#64748b;padding:25px;border-bottom:1px solid #e2e8f0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RIDAC: Industrial Defect Inspection</h1>
+    <div class="sub">YOLO11 instance segmentation → class-conditioned MobileNetV3 defect classification</div>
+    <section class="grid">
+      <div class="card">
+        <label>ZIP file containing images</label>
+        <div class="upload">Inspection batch ready<div class="file">visa_test_360.zip · 360 images</div></div>
+        <div class="control"><label>YOLO confidence · 0.25</label><input type="range" value="25"><div class="ends"><span>0.05</span><span>0.95</span></div></div>
+        <div class="control"><label>YOLO IoU · 0.70</label><input type="range" value="70"><div class="ends"><span>0.10</span><span>0.90</span></div></div>
+        <div class="control"><label>YOLO inference size</label><select><option>640</option></select></div>
+        <button>Inspect ZIP</button>
+        <div class="note">Model loading and warm-up are excluded from displayed timings.</div>
+      </div>
+      <div class="card">
+        <div class="status"><h3>Inspection complete <span class="badge">360 / 360</span></h3><p>All images were processed and the per-image CSV report is ready.</p></div>
+        <div class="image"><img src="../examples/cashew_Anomaly_006.JPG" alt="Industrial inspection preview"></div>
+      </div>
+    </section>
+    <section class="card timing">
+      <h3>Inference time <span style="font-weight:400;color:#64748b">(model loading excluded)</span></h3>
+      <div class="metrics">
+        <div class="metric"><strong>7.419 s</strong><span>YOLO11</span></div>
+        <div class="metric"><strong>43.385 s</strong><span>MobileNetV3</span></div>
+        <div class="metric"><strong>59.336 s</strong><span>Combined inference</span></div>
+        <div class="metric"><strong>164.8 ms</strong><span>Average per image</span></div>
+        <div class="metric"><strong>6.07 img/s</strong><span>Throughput</span></div>
+      </div>
+    </section>
+    <section class="card table">
+      <h3 style="margin-top:0">Live inspection results</h3>
+      <table><thead><tr><th>image</th><th>result</th><th>objects</th><th>defective objects</th><th>class</th><th>max defect probability</th><th>total inference</th></tr></thead>
+      <tbody><tr><td colspan="7">360 per-image records available in the generated inspection CSV</td></tr></tbody></table>
+    </section>
+  </main>
+</body>
+</html>

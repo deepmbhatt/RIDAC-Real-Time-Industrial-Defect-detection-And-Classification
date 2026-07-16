@@ -1,2 +1,0 @@
-This folder contains the best object detection models trained using the API keys by roboflow.
-For how to use roboflow please go to readme file in the repository and look for using roboflow section.
